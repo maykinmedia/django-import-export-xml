@@ -1,13 +1,15 @@
-from django.utils.translation import ugettext_lazy as _
+import inspect
 
 import dicttoxml
+from django.utils.translation import gettext_lazy as _
 from import_export.formats.base_formats import Format
+
+_dictoxml_params = inspect.signature(dicttoxml.dicttoxml).parameters
 
 
 class XML(Format):
-
     def get_title(self):
-        return _('xml')
+        return _("xml")
 
     def is_binary(self):
         """
@@ -22,7 +24,7 @@ class XML(Format):
         return ".xml"
 
     def get_content_type(self):
-        return 'application/xml'
+        return "application/xml"
 
     def can_import(self):
         return False
@@ -34,5 +36,8 @@ class XML(Format):
         """
         Returns format representation for given dataset.
         """
-        kwargs.setdefault('attr_type', False)
-        return dicttoxml.dicttoxml(dataset.dict, **kwargs)
+        kwargs.setdefault("attr_type", False)
+
+        return dicttoxml.dicttoxml(
+            dataset.dict, **{k: v for k, v in kwargs.items() if k in _dictoxml_params}
+        )
