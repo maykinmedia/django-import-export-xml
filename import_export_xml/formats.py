@@ -1,7 +1,8 @@
 import inspect
 
-import dicttoxml
 from django.utils.translation import gettext_lazy as _
+
+import dicttoxml
 from import_export.formats.base_formats import Format
 
 _dictoxml_params = inspect.signature(dicttoxml.dicttoxml).parameters
