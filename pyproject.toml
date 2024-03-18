@@ -33,7 +33,14 @@ Homepage = "https://github.com/maykinmedia/django-import-export-xml"
 "Source Code" = "https://github.com/maykinmedia/django-import-export-xml"
 
 [project.optional-dependencies]
-tests = ["pytest", "pytest-django", "tox", "isort", "black", "flake8"]
+tests = [
+    "black",
+    "flake8",
+    "isort",
+    "pytest",
+    "pytest-django",
+    "tox",
+]
 coverage = ["pytest-cov"]
 release = ["bump-my-version", "twine"]
 
@@ -54,9 +61,10 @@ sections = [
     "FIRSTPARTY",
     "LOCALFOLDER",
 ]
-skip = ["env", ".tox"]
+skip = ["env", ".tox", ".venv"]
 
 [tool.pytest.ini_options]
+pythonpath = "."
 testpaths = ["tests"]
 DJANGO_SETTINGS_MODULE = "testapp.settings"
 
