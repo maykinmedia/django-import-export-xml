@@ -4,14 +4,13 @@ django-import-export-xml
 
 :Version: 0.1.0
 :Source: https://github.com/maykinmedia/django-import-export-xml
-:Keywords: ``<keywords>``
 :PythonVersion: 3.9
 
 |build-status| |code-quality| |black| |coverage|
 
 |python-versions| |django-versions| |pypi-version|
 
-An XML export format for django-import-export
+An XML *export* format for django-import-export
 
 .. contents::
 
@@ -43,7 +42,7 @@ Use it like any of the built-in formats: https://django-import-export.readthedoc
 Local development
 =================
 
-To install and develop the library locally, use::
+To install and develop the library locally, use:
 
 .. code-block:: bash
 
@@ -60,13 +59,13 @@ directory to the python path (or use ``python -m django <command>``):
     # django-admin makemessages -l nl
 
 
-.. |build-status| image:: https://github.com/maykinmedia/django_import_export_xml/workflows/Run%20CI/badge.svg
+.. |build-status| image:: https://github.com/maykinmedia/django-import-export-xml/workflows/Run%20CI/badge.svg
     :alt: Build status
-    :target: https://github.com/maykinmedia/django_import_export_xml/actions?query=workflow%3A%22Run+CI%22
+    :target: https://github.com/maykinmedia/django-import-export-xml/actions?query=workflow%3A%22Run+CI%22
 
-.. |code-quality| image:: https://github.com/maykinmedia/django_import_export_xml/workflows/Code%20quality%20checks/badge.svg
+.. |code-quality| image:: https://github.com/maykinmedia/django-import-export-xml/workflows/Code%20quality%20checks/badge.svg
      :alt: Code quality checks
-     :target: https://github.com/maykinmedia/django_import_export_xml/actions?query=workflow%3A%22Code+quality+checks%22
+     :target: https://github.com/maykinmedia/django-import-export-xml/actions?query=workflow%3A%22Code+quality+checks%22
 
 .. |black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
