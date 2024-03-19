@@ -2,7 +2,7 @@
 django-import-export-xml
 ========================
 
-:Version: 0.1.0
+:Version: 0.2.0
 :Source: https://github.com/maykinmedia/django-import-export-xml
 :PythonVersion: 3.9
 
